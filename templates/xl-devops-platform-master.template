@@ -398,7 +398,7 @@ Resources:
         QSS3BucketName: !Ref QSS3BucketName
         QSS3BucketRegion: !Ref QSS3BucketRegion
         BastionInstanceType: t2.small
-        BastionAMIOS: Amazon-Linux-HVM
+        BastionAMIOS: Amazon-Linux2-HVM
         KeyPairName: !Ref KeyPairName
         QSS3KeyPrefix: !Join 
           - ''
