@@ -1,0 +1,68 @@
+
+.Network Configuration
+[width="100%",cols="16%,11%,73%",options="header",]
+|===
+|Parameter label (name) |Default Value|Description|VPC ID
+(`VPCID`)|`**__Requires Input__**`|The VPC Id|VPC CIDR
+(`VPCCIDR`)|`10.0.0.0/19`|Enter the CIDR Range for your VPC|Remote access CIDR
+(`RemoteAccessCIDR`)|`**__Requires Input__**`|CIDR block for remote access|Public subnet 1
+(`PublicSubnet1ID`)|`**__Requires Input__**`|The first subnet the XL DevOps Platform should be deployed to|Public subnet 2
+(`PublicSubnet2ID`)|`**__Requires Input__**`|The second subnet the XL DevOps Platform should be deployed to|Private subnet 1
+(`PrivateSubnet1ID`)|`**__Requires Input__**`|The first subnet the XL DevOps Platform should be deployed to|Private subnet 2
+(`PrivateSubnet2ID`)|`**__Requires Input__**`|The second subnet the XL DevOps Platform should be deployed to|Private data Subnet 1
+(`DataSubnet1ID`)|`**__Requires Input__**`|The first subnet the Aurora database cluster should be deployed to|Private data Subnet 2
+(`DataSubnet2ID`)|`**__Requires Input__**`|The second subnet the Aurora database cluster should be deployed to
+|===
+.RDS Configuration
+[width="100%",cols="16%,11%,73%",options="header",]
+|===
+|Parameter label (name) |Default Value|Description|Database administrator username
+(`DBMasterUsername`)|`xldevops`|The database admin account username|Database administrator password
+(`DBMasterPassword`)|`**__Requires Input__**`|The database admin account password|Database backup retention period
+(`DBBackupRetentionPeriod`)|`7`|The number of days for which automatic DB snapshots are retained.|Database instance class
+(`DBInstanceClass`)|`db.r4.large`|The name of the compute and memory capacity class of the DB instance.
+|===
+.HTTP Configuration
+[width="100%",cols="16%,11%,73%",options="header",]
+|===
+|Parameter label (name) |Default Value|Description|SSL certificate arn
+(`SslCertificateArn`)|`:default`|The ARN of the SSL certificate used to secure internet access to the XebiaLabs DevOps Platform|The type of load balancer to deploy (either internal or public)
+(`LoadBalancerType`)|`internet-facing`|The type of load balancer to deploy (either internal or public)
+|===
+.General Settings
+[width="100%",cols="16%,11%,73%",options="header",]
+|===
+|Parameter label (name) |Default Value|Description|Environment name
+(`EnvironmentName`)|`xldevops`|The Environment name, defaults to 'xldevops'|Key name
+(`KeyPairName`)|`**__Requires Input__**`|The name of an existing public/private key pair, which allows you to securely connect to your instance after it launches|Bastion security group
+(`BastionSecurityGroup`)|`**__Requires Input__**`|The Bastion Security Group that allows SSH access to the ECS machines|User external database?
+(`UseExternalDB`)|`true`|Use an external Database
+|===
+.XebiaLabs DevOps Platform Configuration
+[width="100%",cols="16%,11%,73%",options="header",]
+|===
+|Parameter label (name) |Default Value|Description|XL DevOps Platform instance type
+(`XLPlatformInstanceType`)|`m5.xlarge`|The instance type the XL DevOps Platform applications are created on|Install XL Release
+(`InstallXLRelease`)|`true`|Whether XL Release should be installed in the ECS Cluster.|XL Release Docker image
+(`XLReleaseDockerImage`)|`xebialabs/xl-release`|The path to the XL Release Docker image (registry/image)|XL Release version
+(`XLReleaseVersion`)|`**__Requires Input__**`|The version of XL Release to deploy|XL Release administrator password
+(`XLReleasePassword`)|`**__Requires Input__**`|The administrator password for XL Release|XL Release cluster mode
+(`XLReleaseClusterMode`)|`default`|Set the clustermode for XL Release|XL Release license
+(`XLReleaseLicense`)|`trial`|The (Base64 encoded) license for XL Release|Install XL Deploy
+(`InstallXLDeploy`)|`true`|Whether XL Deploy should be installed in the ECS Cluster.|XL Deploy Docker image
+(`XLDeployDockerImage`)|`xebialabs/xl-deploy`|The path to the XL Deploy Docker image (registry/image)|XL Deploy version
+(`XLDeployVersion`)|`**__Requires Input__**`|The version of XL Deploy to deploy|XL Deploy administrator password
+(`XLDeployPassword`)|`**__Requires Input__**`|The administrator password for XL Deploy|XL Deploy cluster mode
+(`XLDeployClusterMode`)|`default`|Set the clustermode for XL Deploy|XL Deploy license
+(`XLDeployLicense`)|`trial`|The (Base64 encoded) license for XL Deploy|EFS mount point
+(`MountPoint`)|`/mnt/efs`|The Linux mount point for the EFS volume|Accept the XebiaLabs EULA
+(`AcceptEula`)|`**__Requires Input__**`|To deploy the stack, AcceptEula value must be set to 'yes'
+|===
+.AWS Quick Start Configuration
+[width="100%",cols="16%,11%,73%",options="header",]
+|===
+|Parameter label (name) |Default Value|Description|Quick Start S3 bucket name
+(`QSS3BucketName`)|`aws-quickstart`|S3 bucket name for the Quick Start assets. Quick Start bucket name can include numbers, lowercase letters, uppercase letters, and hyphens (-). It cannot start or end with a hyphen (-).|Quick Start S3 bucket region
+(`QSS3BucketRegion`)|`us-east-1`|The AWS Region where the Quick Start S3 bucket (QSS3BucketName) is hosted. When using your own bucket, you must specify this value.|Quick Start S3 key prefix
+(`QSS3KeyPrefix`)|`quickstart-xebialabs-devops-platform/`|S3 key prefix for the Quick Start assets. Quick Start key prefix can include numbers, lowercase letters, uppercase letters, hyphens (-), and forward slash (/).
+|===
