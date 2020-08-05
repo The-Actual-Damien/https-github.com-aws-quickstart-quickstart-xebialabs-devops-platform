@@ -2,4 +2,19 @@
 // Briefly describe the software. Use consistent and clear branding. 
 // Include the benefits of using the software on AWS, and provide details on usage scenarios.
 
-<Describe how the software works on AWS.>
+The {partner-company-name} DevOps Platform can provision and manage dynamic infrastructure running in the AWS Cloud, or in private or hybrid cloud environments. {partner-company-name} supports deployments to a variety of AWS products and services, including Amazon Elastic Container Service (Amazon ECS), Amazon Elastic Container Service for Kubernetes (Amazon EKS), AWS Fargate, AWS Service Catalog, and more.
+
+In addition to provisioning and managing cloud-based environments, {partner-company-name} orchestrates end-to-end release and deployment processes for applications running in the cloud or on premises. The {partner-company-name} DevOps Platform helps you build efficient, repeatable, and scalable release and deployment processes for all types of technologies, from mainframes and middleware to containers and microservices. 
+
+=== Model-Based Deployments and Automated Rollbacks for AWS
+
+{partner-company-name} dynamically generates provisioning and deployment plans based on your infrastructure and application configuration, using logic stored in plugins. By abstracting configuration details from provisioning and deployment logic, {partner-company-name} can provision any cloud-based architecture and deploy to it. Changes are easy to make and propagate, and rollbacks happen automatically when needed.
+
+=== Release Orchestration, Dependency Management, and Self-Service Deployments for AWS
+
+{partner-company-name} release orchestration defines and automates the steps in your software delivery pipeline and connects AWS directly to that pipeline. You can deploy your code to AWS after it passes through the release process. {partner-company-name} tracks and enforces dependencies between complex releases and microservices, and prevents deployment conflicts. 
+
+=== Built-in Compliance and Reporting for AWS Release Pipelines
+
+{partner-company-name} provides extensive reporting on the complete release pipeline and goal-based KPI dashboards that you can use to measure and improve your DevOps processes. It captures release status, release metrics, and data needed for compliance requirements, and displays this information in configurable dashboards and customizable reports. 
+

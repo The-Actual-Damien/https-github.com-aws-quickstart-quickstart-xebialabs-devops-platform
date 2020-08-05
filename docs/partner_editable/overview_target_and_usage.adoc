@@ -4,4 +4,6 @@
 
 This Quick Start reference deployment guide provides step-by-step instructions for deploying {partner-product-name} on the AWS Cloud.
 
-This Quick Start is for users who <target audience and usage scenario>
+This Quick Start is for development teams, infrastructure architects, and DevOps professionals who want to quickly get started with the Digital.ai DevOps Platform, which orchestrates releases, automates deployments, and provides performance insights for DevOps pipelines.
+
+This Quick Start provides a secure, highly-available setup of the Digital.ai DevOps Platform running in the AWS Cloud. It is designed for Digital.ai customers who are looking to move to AWS, or for users who are test-driving the trial version of the Digital.ai DevOps Platform. The goal of this guide is to help you get started with Digital.ai release orchestration and deployment automation on AWS, even if you’re new to the Digital.ai DevOps Platform.
