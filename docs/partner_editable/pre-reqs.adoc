@@ -1,3 +1,3 @@
 ==== Prepare for the deployment
 
-A trial or commercial Digital.ai DevOps Platform license. See link:#_software_licenses[Software licenses] earlier in this document.
+A trial or commercial {partner-company-name} {partner-product-name} license. See link:#_software_licenses[Software licenses] earlier in this document.

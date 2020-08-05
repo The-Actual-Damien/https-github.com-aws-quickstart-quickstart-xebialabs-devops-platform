@@ -15,14 +15,29 @@ For additional information, see https://docs.aws.amazon.com/AWSCloudFormation/la
 
 *A.* We recommend that you launch the Quick Start templates from the links in this guide or from another S3 bucket. If you deploy the templates from a local copy on your computer or from a location other than an S3 bucket, you might encounter template size limitations. For more information about AWS CloudFormation quotas, see the http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html[AWS documentation^].
 
-*Q.* Can I use the ‘latest’ tag when specifying a version for the {partner-company-name} DevOps Platform?
+*Q.* Can I use the ‘latest’ tag when specifying a version for the {partner-company-name} {partner-product-name}?
 
-*A.* The ‘latest’ tag is an anti-pattern in DevOps because it precludes repeatable builds/deployments. This makes it impossible to tell which version was used for the deployment. The {partner-company-name} DevOps Platform is not released with a ‘latest’ tag. Rather, {partner-company-name} releases each new version with two tags: the exact (major.minor.patch) version number and a “latest in stream” (major.minor) version number. The “latest in stream” tag will be updated with each subsequent maintenance release of the {partner-company-name} DevOps Platform.
+*A.* The ‘latest’ tag is an anti-pattern in DevOps because it precludes repeatable builds/deployments. This makes it impossible to tell which version was used for the deployment. The {partner-company-name} {partner-product-name} is not released with a ‘latest’ tag. Rather, {partner-company-name} releases each new version with two tags: the exact (major.minor.patch) version number and a “latest in stream” (major.minor) version number. The “latest in stream” tag will be updated with each subsequent maintenance release of the {partner-company-name} {partner-product-name}.
 
-*Q.* Can I run the {partner-company-name} DevOps Platform on the AWS Free Tier?
+*Q.* Can I run the {partner-company-name} {partner-product-name} on the AWS Free Tier?
 
-*A.* No. The minimum instance sizes needed for the {partner-company-name} DevOps Platform are larger than the AWS Free Tier allows.
+*A.* No. The minimum instance sizes needed for the {partner-company-name} {partner-product-name} are larger than the AWS Free Tier allows.
 
-*Q.* How many AWS resources does the {partner-company-name} DevOps Platform use?
+*Q.* How many AWS resources does the {partner-company-name} {partner-product-name} use?
 
-*A.* The {partner-company-name} DevOps Platform instantiates two to four EC2 hosts in a single ECS cluster for running the {partner-company-name} DevOps Platform containers. In addition, one EC2 host is created to provide a bastion host to access your VPC. Finally, you need one Elastic IP address to access the {partner-company-name} DevOps Platform.
+*A.* The {partner-company-name} {partner-product-name} instantiates two to four EC2 hosts in a single ECS cluster for running the {partner-company-name} {partner-product-name} containers. In addition, one EC2 host is created to provide a bastion host to access your VPC. Finally, you need one Elastic IP address to access the {partner-company-name} {partner-product-name}.
+
+== Additional Resources
+=== AWS services
+*	https://docs.aws.amazon.com/ec2/[Amazon EC2]
+*	https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html[Amazon ECS]
+*	https://docs.aws.amazon.com/efs/[Amazon EFS]
+*	https://docs.aws.amazon.com/vpc/[Amazon VPC]
+*	https://docs.aws.amazon.com/cloudformation/[AWS CloudFormation]
+*	https://docs.aws.amazon.com/iam/[AWS Identity and Access Management] 
+
+=== {partner-company-name} {partner-product-name} documentation
+* {partner-company-name} https://docs.xebialabs.com/[product documentation]
+* {partner-company-name} https://support.xebialabs.com[support]
+* {partner-company-name} https://digital.ai/contact/[contact information]
+

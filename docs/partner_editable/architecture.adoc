@@ -25,21 +25,21 @@ Shell (SSH) access to EC2 instances in public and private subnets.*
 
 In the private application subnets:
 
-* An Amazon Elastic Container Service (Amazon ECS) cluster running on EC2 instances for hosting the Digital.ai DevOps Platform containers that contain the Digital.ai Release and Digital.ai Deploy modules
+* An Amazon Elastic Container Service (Amazon ECS) cluster running on EC2 instances for hosting the {partner-company-name} {partner-product-name} containers that contain the {partner-company-name} Release and {partner-company-name} Deploy modules
 
 In the ECS cluster:
 
-* A Digital.ai Release module set up in full cluster mode.
-* A Digital.ai Deploy module set up in high-availability (hot-standby) mode.
+* A {partner-company-name} Release module set up in full cluster mode.
+* A {partner-company-name} Deploy module set up in high-availability (hot-standby) mode.
 
 In the private data subnets:
 
-* An Amazon Aurora PostgreSQL cluster, for hosting the Digital.ai DevOps Platform data.
-*	An Amazon Elastic File System (Amazon EFS) volume, for hosting the disk-based configuration and data for the Digital.ai DevOps Platform.
+* An Amazon Aurora PostgreSQL cluster, for hosting the {partner-company-name} {partner-product-name} data.
+*	An Amazon Elastic File System (Amazon EFS) volume, for hosting the disk-based configuration and data for the {partner-company-name} {partner-product-name}.
 
 NOTE: Amazon Elastic File System (Amazon EFS) volumes are encrypted.
 
-*	An Application Load Balancer for routing incoming user requests to the Digital.ai DevOps Platform containers.
+*	An Application Load Balancer for routing incoming user requests to the {partner-company-name} {partner-product-name} containers.
 
 *The template that deploys the Quick Start into an existing VPC skips
 the components marked by asterisks and prompts you for your existing VPC

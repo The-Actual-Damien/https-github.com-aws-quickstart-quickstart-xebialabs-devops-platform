@@ -13,4 +13,4 @@ It is recommended to regularly back up the data in the Amazon RDS instance in ad
 
 == Security
 The security groups and IAM roles are set up to provide minimal access to the software. You can fine-tune them to your needs.
-For setting up users and groups in the {partner-company-name} DevOps Platform itself, please refer to the product documentation at https://docs.xebialabs.com.
+For setting up users and groups in the {partner-company-name} {partner-product-name} itself, please refer to the product documentation at https://docs.xebialabs.com.

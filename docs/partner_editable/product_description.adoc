@@ -2,9 +2,9 @@
 // Briefly describe the software. Use consistent and clear branding. 
 // Include the benefits of using the software on AWS, and provide details on usage scenarios.
 
-The {partner-company-name} DevOps Platform can provision and manage dynamic infrastructure running in the AWS Cloud, or in private or hybrid cloud environments. {partner-company-name} supports deployments to a variety of AWS products and services, including Amazon Elastic Container Service (Amazon ECS), Amazon Elastic Container Service for Kubernetes (Amazon EKS), AWS Fargate, AWS Service Catalog, and more.
+The {partner-company-name} {partner-product-name} can provision and manage dynamic infrastructure running in the AWS Cloud, or in private or hybrid cloud environments. {partner-company-name} supports deployments to a variety of AWS products and services, including Amazon Elastic Container Service (Amazon ECS), Amazon Elastic Container Service for Kubernetes (Amazon EKS), AWS Fargate, AWS Service Catalog, and more.
 
-In addition to provisioning and managing cloud-based environments, {partner-company-name} orchestrates end-to-end release and deployment processes for applications running in the cloud or on premises. The {partner-company-name} DevOps Platform helps you build efficient, repeatable, and scalable release and deployment processes for all types of technologies, from mainframes and middleware to containers and microservices. 
+In addition to provisioning and managing cloud-based environments, {partner-company-name} orchestrates end-to-end release and deployment processes for applications running in the cloud or on premises. The {partner-company-name} {partner-product-name} helps you build efficient, repeatable, and scalable release and deployment processes for all types of technologies, from mainframes and middleware to containers and microservices. 
 
 === Model-Based Deployments and Automated Rollbacks for AWS
 
