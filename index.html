@@ -762,6 +762,11 @@ table.tableblock .title,
 table p {
   margin: 0rem;
 }
+
+/* Add border around hyperlink images */
+a img {
+    border: 1px solid #A4A4A4;
+}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -885,7 +890,7 @@ using the Quick Start.</p>
 <p>The AWS CloudFormation template for this Quick Start includes
 configuration parameters that you can customize. Some of the settings,
 such as the instance type, affect the cost of deployment. For cost estimates,
-see the pricing pages for each AWS service you will use. Prices are subject to change.</p>
+see the pricing pages for each AWS service you use. Prices are subject to change.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -894,7 +899,7 @@ see the pricing pages for each AWS service you will use. Prices are subject to c
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-After you deploy the Quick Start, enable the <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-reports-gettingstarted-turnonreports.html" target="_blank" rel="noopener">AWS Cost and Usage Report</a> to deliver billing metrics to an Amazon Simple Storage Service (Amazon S3) bucket in your account. It provides cost estimates based on usage throughout each month and finalizes the data at the end of the month. For more information about the report, see the <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-reports-costusage.html" target="_blank" rel="noopener">AWS documentation</a>.
+After you deploy the Quick Start, enable the <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-reports-gettingstarted-turnonreports.html" target="_blank" rel="noopener">AWS Cost and Usage Report</a> to deliver billing metrics to an Amazon Simple Storage Service (Amazon S3) bucket in your account. It provides cost estimates based on usage throughout each month and aggregates the data at the end of the month. For more information about the report, see the <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-reports-costusage.html" target="_blank" rel="noopener">AWS documentation</a>.
 </td>
 </tr>
 </table>
@@ -1005,7 +1010,7 @@ Cloud.</p>
 <div class="sect2">
 <h3 id="_technical_requirements">Technical requirements</h3>
 <div class="paragraph">
-<p>Before you launch the Quick Start, your account must be configured as specified below. Otherwise, deployment might fail.</p>
+<p>Before you launch the Quick Start, your account must be configured as specified in the following table. Otherwise, deployment might fail.</p>
 </div>
 <div class="sect3">
 <h4 id="_resource_limits">Resource limits</h4>
@@ -1060,10 +1065,7 @@ Cloud.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_supported_regions">Supported regions</h4>
-<div class="paragraph">
-<p>The following regions are currently supported by this Quick Start.</p>
-</div>
+<h4 id="_supported_regions">Supported Regions</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1081,19 +1083,10 @@ Cloud.</p>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Certain regions are available on an opt-in basis. Refer to the AWS Documentation on <a href="https://docs.aws.amazon.com/general/latest/gr/rande-manage.html" target="_blank" rel="noopener">Managing Regions</a> for more information.
+Certain Regions are available on an opt-in basis. Refer to the AWS Documentation on <a href="https://docs.aws.amazon.com/general/latest/gr/rande-manage.html" target="_blank" rel="noopener">Managing Regions</a> for more information.
 </td>
 </tr>
 </table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_ec2_key_pairs">EC2 key pairs</h4>
-<div class="paragraph">
-<p>Make sure that at least one <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html" target="_blank" rel="noopener">Amazon EC2 key pair</a> exists in your AWS account in the Region where you plan to deploy the Quick Start. Make note of the key pair name. You need it during deployment. To create a key pair, follow the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html" target="_blank" rel="noopener">instructions in the AWS documentation</a>.</p>
-</div>
-<div class="paragraph">
-<p>For testing or proof-of-concept purposes, we recommend creating a new key pair instead of using one that’s already being used by a production instance.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1240,8 +1233,8 @@ If you’re deploying DevOps Platform into an existing VPC, make sure that your 
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-We recommend keeping the default settings for the three parameters labled 'Quick Start S3 bucket name', 'Quick Start S3 bucket
-Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick Start templates for your own deployment projects. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For additional details, see the <a href="https://aws-quickstart.github.io/option1.html" target="_blank" rel="noopener">AWS Quick Start Contributor’s Guide</a>.
+Unless you are customizing the Quick Start templates for your own deployment projects, we recommend that you keep the default settings for the parameters labeled <code>Quick Start S3 bucket name</code>, <code>Quick Start S3 bucket
+Region</code>, and <code>Quick Start S3 key prefix</code>. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For more information, see the <a href="https://aws-quickstart.github.io/option1.html" target="_blank" rel="noopener">AWS Quick Start Contributor’s Guide</a>.
 </td>
 </tr>
 </table>
@@ -1259,7 +1252,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default Value</th>
+<th class="tableblock halign-left valign-top">Default value</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
@@ -1267,7 +1260,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">VPC ID
 (<code>VPCID</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The VPC Id</p></td>
 </tr>
 <tr>
@@ -1279,43 +1272,43 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Remote access CIDR
 (<code>RemoteAccessCIDR</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CIDR block for remote access</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Public subnet 1
 (<code>PublicSubnet1ID</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The first subnet the XL DevOps Platform should be deployed to</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Public subnet 2
 (<code>PublicSubnet2ID</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The second subnet the XL DevOps Platform should be deployed to</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Private subnet 1
 (<code>PrivateSubnet1ID</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The first subnet the XL DevOps Platform should be deployed to</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Private subnet 2
 (<code>PrivateSubnet2ID</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The second subnet the XL DevOps Platform should be deployed to</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Private data Subnet 1
 (<code>DataSubnet1ID</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The first subnet the Aurora database cluster should be deployed to</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Private data Subnet 2
 (<code>DataSubnet2ID</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The second subnet the Aurora database cluster should be deployed to</p></td>
 </tr>
 </tbody>
@@ -1330,7 +1323,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default Value</th>
+<th class="tableblock halign-left valign-top">Default value</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
@@ -1344,7 +1337,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Database administrator password
 (<code>DBMasterPassword</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The database admin account password</p></td>
 </tr>
 <tr>
@@ -1371,7 +1364,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default Value</th>
+<th class="tableblock halign-left valign-top">Default value</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
@@ -1400,7 +1393,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default Value</th>
+<th class="tableblock halign-left valign-top">Default value</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
@@ -1414,13 +1407,13 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Key name
 (<code>KeyPairName</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The name of an existing public/private key pair, which allows you to securely connect to your instance after it launches</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Bastion security group
 (<code>BastionSecurityGroup</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The Bastion Security Group that allows SSH access to the ECS machines</p></td>
 </tr>
 <tr>
@@ -1441,7 +1434,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default Value</th>
+<th class="tableblock halign-left valign-top">Default value</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
@@ -1467,13 +1460,13 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XL Release version
 (<code>XLReleaseVersion</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The version of XL Release to deploy</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XL Release administrator password
 (<code>XLReleasePassword</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The administrator password for XL Release</p></td>
 </tr>
 <tr>
@@ -1503,13 +1496,13 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XL Deploy version
 (<code>XLDeployVersion</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The version of XL Deploy to deploy</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XL Deploy administrator password
 (<code>XLDeployPassword</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The administrator password for XL Deploy</p></td>
 </tr>
 <tr>
@@ -1533,7 +1526,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Accept the XebiaLabs EULA
 (<code>AcceptEula</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To deploy the stack, AcceptEula value must be set to 'yes'</p></td>
 </tr>
 </tbody>
@@ -1548,7 +1541,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default Value</th>
+<th class="tableblock halign-left valign-top">Default value</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
@@ -1586,7 +1579,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default Value</th>
+<th class="tableblock halign-left valign-top">Default value</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
@@ -1594,13 +1587,13 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Remote access CIDR
 (<code>RemoteAccessCIDR</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CIDR block for remote access</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Availability zones
 (<code>AvailabilityZones</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">List of Availability Zones (AZs) to use for the subnets in the VPC. Select two.</p></td>
 </tr>
 <tr>
@@ -1657,7 +1650,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default Value</th>
+<th class="tableblock halign-left valign-top">Default value</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
@@ -1671,7 +1664,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Database administrator password
 (<code>DBMasterPassword</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The database admin account password</p></td>
 </tr>
 <tr>
@@ -1698,7 +1691,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default Value</th>
+<th class="tableblock halign-left valign-top">Default value</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
@@ -1727,7 +1720,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default Value</th>
+<th class="tableblock halign-left valign-top">Default value</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
@@ -1741,7 +1734,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Key name
 (<code>KeyPairName</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The name of an existing public/private key pair, which allows you to securely connect to your instance after it launches</p></td>
 </tr>
 <tr>
@@ -1762,7 +1755,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default Value</th>
+<th class="tableblock halign-left valign-top">Default value</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
@@ -1788,13 +1781,13 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XL Deploy version
 (<code>XLDeployVersion</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The version of XL Deploy to deploy</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XL Deploy administrator password
 (<code>XLDeployPassword</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The administrator password for XL Deploy</p></td>
 </tr>
 <tr>
@@ -1824,13 +1817,13 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XL Release version
 (<code>XLReleaseVersion</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The version of XL Release to deploy</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XL Release administrator password
 (<code>XLReleasePassword</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The administrator password for XL Release</p></td>
 </tr>
 <tr>
@@ -1848,7 +1841,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Accept the XebiaLabs EULA
 (<code>AcceptEula</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires Input</em></strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To deploy the stack, AcceptEula value must be set to 'yes'</p></td>
 </tr>
 </tbody>
@@ -1863,7 +1856,7 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default Value</th>
+<th class="tableblock halign-left valign-top">Default value</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
@@ -1903,13 +1896,13 @@ Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick S
 <p>Monitor the status of the stack. When the status is <strong>CREATE_COMPLETE</strong>, the DevOps Platform deployment is ready.</p>
 </li>
 <li>
-<p>Use the values displayed in the <strong>Outputs</strong> tab for the stack, as shown in Figure 2, to view the resources that were created.</p>
+<p>Use the values displayed in the <strong>Outputs</strong> tab for the stack, as shown in <a href="#cfn_outputs">DevOps Platform outputs after successful deployment</a>, to view the created resources.</p>
 </li>
 </ol>
 </div>
 <div id="cfn_outputs" class="imageblock">
 <div class="content">
-<img src="images/cfn_outputs.png" alt="cfn_outputs" width="648" height="439">
+<a class="image" href="images/cfn_outputs.png"><img src="images/cfn_outputs.png" alt="cfn_outputs" width="648" height="439"></a>
 </div>
 <div class="title">Figure 2. DevOps Platform outputs after successful deployment</div>
 </div>
@@ -2018,15 +2011,15 @@ and to share your customizations with others.</p>
 </div>
 <hr>
 <div class="paragraph">
-<p>© 2020, Amazon Web Services, Inc. or its affiliates, and Digital.ai, Inc.. All rights reserved.</p>
+<p>© 2020, Amazon Web Services Inc., or its affiliates, and Digital.ai, Inc.. All rights reserved.</p>
 </div>
 <div class="sect3">
 <h4 id="_notices">Notices</h4>
 <div class="paragraph">
-<p>This document is provided for informational purposes only. It represents AWS’s current product offerings and practices as of the date of issue of this document, which are subject to change without notice. Customers are responsible for making their own independent assessment of the information in this document and any use of AWS’s products or services, each of which is provided “as is” without warranty of any kind, whether express or implied. This document does not create any warranties, representations, contractual commitments, conditions or assurances from AWS, its affiliates, suppliers or licensors. The responsibilities and liabilities of AWS to its customers are controlled by AWS agreements, and this document is not part of, nor does it modify, any agreement between AWS and its customers.</p>
+<p>This document is provided for informational purposes only. It represents AWS’s current product offerings and practices as of the date of issue of this document, which are subject to change without notice. Customers are responsible for making their own independent assessment of the information in this document and any use of AWS’s products or services, each of which is provided “as is” without warranty of any kind, whether expressed or implied. This document does not create any warranties, representations, contractual commitments, conditions, or assurances from AWS, its affiliates, suppliers, or licensors. The responsibilities and liabilities of AWS to its customers are controlled by AWS agreements, and this document is not part of, nor does it modify, any agreement between AWS and its customers.</p>
 </div>
 <div class="paragraph">
-<p>The software included with this paper is licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at <a href="http://aws.amazon.com/apache2.0/" class="bare">http://aws.amazon.com/apache2.0/</a> or in the "license" file accompanying this file. This code is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
+<p>The software included with this paper is licensed under the Apache License, version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at <a href="http://aws.amazon.com/apache2.0/" class="bare">http://aws.amazon.com/apache2.0/</a> or in the accompanying "license" file. This code is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expressed or implied. See the License for specific language governing permissions and limitations.</p>
 </div>
 </div>
 </div>
@@ -2034,7 +2027,7 @@ and to share your customizations with others.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-08-10 10:47:47 UTC
+Last updated 2020-08-24 11:06:25 UTC
 </div>
 </div>
 </body>
