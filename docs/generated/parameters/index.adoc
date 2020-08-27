@@ -1,1 +1,12 @@
-// placeholder
+
+=== Launch into a New VPC
+include::xl-devops-platform-master.template.adoc[]
+
+=== Launch into an existing VPC
+include::xl-devops-platform.adoc[]
+
+=== Launch into an existing VPC
+include::xl-devops-platform.template.adoc[]
+
+=== Launch into a New VPC
+include::xl-devops-platform-master.adoc[]
