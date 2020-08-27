@@ -1,6 +1,6 @@
 :quickstart-project-name: quickstart-xebialabs-devops-platform
 :partner-product-name: DevOps Platform
-:partner-company-name: Digital.ai, Inc.
+:partner-company-name: Digital.ai
 :doc-month: July
 :doc-year: 2020
 :partner-contributors: 
