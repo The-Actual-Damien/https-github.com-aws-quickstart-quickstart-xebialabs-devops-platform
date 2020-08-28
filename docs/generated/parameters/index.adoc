@@ -1,10 +1,4 @@
 
-=== Launch into an existing VPC
-include::xl-devops-platform.adoc[]
-
-=== Launch into a New VPC
-include::xl-devops-platform-master.adoc[]
-
 === Launch into a New VPC
 include::xl-devops-platform-master.template.adoc[]
 
