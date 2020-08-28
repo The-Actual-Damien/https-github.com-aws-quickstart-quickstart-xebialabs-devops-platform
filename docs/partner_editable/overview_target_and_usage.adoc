@@ -4,4 +4,6 @@
 
 This Quick Start reference deployment guide provides step-by-step instructions for deploying {partner-product-name} on the AWS Cloud.
 
-This Quick Start is for users who <target audience and usage scenario>
+This Quick Start is for development teams, infrastructure architects, and DevOps professionals who want to quickly get started with the {partner-company-name} {partner-product-name}, which orchestrates releases, automates deployments, and provides performance insights for DevOps pipelines.
+
+This Quick Start provides a secure, highly-available setup of the {partner-company-name} {partner-product-name} running in the AWS Cloud. It is designed for {partner-company-name} customers who are looking to move to AWS, or for users who are test-driving the trial version of the {partner-company-name} {partner-product-name}. The goal of this guide is to help you get started with {partner-company-name} release orchestration and deployment automation on AWS, even if you’re new to the {partner-company-name} {partner-product-name}.
