@@ -1,7 +1,7 @@
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: >
-  This template will setup the XebiaLabs DevOps Platform in a newly created VPC.
+  This template will setup the Digital.ai DevOps Platform in a newly created VPC.
   It will also create the Bastion Hosts to access the VPC. (qs-1paeiji6j)
 Metadata:
   QuickStartDocumentation:
@@ -91,7 +91,7 @@ Metadata:
       XLReleaseLicense:
         default: XL Release license
       AcceptEula:
-        default: Accept the XebiaLabs EULA  
+        default: Accept the Digital.ai EULA  
       SslCertificateArn:
         default: SSL certificate arn
       LoadBalancerType: 
@@ -188,13 +188,13 @@ Parameters:
       - 'true'
       - 'false'
   AcceptEula:
-    Description: To deploy the stack, AcceptEula value must be set to 'yes'
+    Description: To deploy the stack, AcceptEula value must be set to 'yes'. Note - Irrespective of having a full license or a 30 days trial license or evaluating the product for 7 days using docker containers, you must accept EULA (End-user license agreement)
     Type: String
     AllowedPattern: '^yes$'    
   SslCertificateArn:
     Description: >-
       The ARN of the SSL certificate used to secure internet access to the
-      XebiaLabs DevOps Platform
+      Digital.ai DevOps Platform
     Type: String
     Default: ':default'
   LoadBalancerType:

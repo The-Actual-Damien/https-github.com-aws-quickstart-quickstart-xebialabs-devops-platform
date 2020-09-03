@@ -1,6 +1,6 @@
 // Include details about the license and how they can sign up. If no license is required, clarify that. 
 
-You can deploy the {partner-company-name} {partner-product-name} using one of the following license types:
+You can deploy the {partner-product-name} using one of the following license types:
 
 *	A trial license that you can obtain from https://www.xebialabs.com/trial.
 *	A commercial subscription license that you can purchase by contacting {partner-company-name} at https://digital.ai/contact, and then download from https://dist.xebialabs.com.

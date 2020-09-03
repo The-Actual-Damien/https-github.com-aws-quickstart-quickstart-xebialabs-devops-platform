@@ -1,6 +1,6 @@
 ---
 AWSTemplateFormatVersion: 2010-09-09
-Description: This template will install the XebiaLabs DevOps Platform in an existing VPC. (qs-1paeiji4m)
+Description: This template will install the Digital.ai DevOps Platform in an existing VPC. (qs-1paeiji4m)
 Metadata: 
   AWS::CloudFormation::Interface:
     ParameterGroups:
@@ -87,7 +87,7 @@ Metadata:
       XLReleaseLicense:
         default: XL Release license
       AcceptEula:
-        default: Accept the XebiaLabs EULA  
+        default: Accept the Digital.ai EULA  
       SslCertificateArn:
         default: SSL certificate arn
       EnvironmentName:
@@ -183,11 +183,11 @@ Parameters:
     - 'true'
     - 'false'
   AcceptEula:
-    Description: To deploy the stack, AcceptEula value must be set to 'yes'
+    Description: To deploy the stack, AcceptEula value must be set to 'yes'. Note - Irrespective of having a full license or a 30 days trial license or evaluating the product for 7 days using docker containers, you must accept EULA (End-user license agreement)
     Type: String
     AllowedPattern: '^yes$'  
   SslCertificateArn:
-    Description: The ARN of the SSL certificate used to secure internet access to the XebiaLabs DevOps Platform
+    Description: The ARN of the SSL certificate used to secure internet access to the Digital.ai DevOps Platform
     Type: String
     Default: ':default'
   EnvironmentName:
