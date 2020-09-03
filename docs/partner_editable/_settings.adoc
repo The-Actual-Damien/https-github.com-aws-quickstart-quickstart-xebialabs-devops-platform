@@ -3,8 +3,8 @@
 :partner-company-name: Digital.ai
 :doc-month: July
 :doc-year: 2020
-:partner-contributors: 
-:quickstart-contributors: AWS Quick Start Team
+:partner-contributors: Digital.ai
+:quickstart-contributors: AWS Quick Start team
 :deployment_time: 40 minutes
 :default_deployment_region: us-east-1
 // Uncomment these two attributes if you are leveraging
