@@ -26,7 +26,7 @@
 [width="100%",cols="16%,11%,73%",options="header",]
 |===
 |Parameter label (name) |Default value|Description|SSL certificate arn
-(`SslCertificateArn`)|`:default`|The ARN of the SSL certificate used to secure internet access to the XebiaLabs DevOps Platform|The type of load balancer to deploy (either internal or public)
+(`SslCertificateArn`)|`:default`|The ARN of the SSL certificate used to secure internet access to the Digital.ai DevOps Platform|The type of load balancer to deploy (either internal or public)
 (`LoadBalancerType`)|`internet-facing`|The type of load balancer to deploy (either internal or public)
 |===
 .General Settings
@@ -53,8 +53,8 @@
 (`XLReleaseVersion`)|`**__Requires input__**`|The version of XL Release to deploy|XL Release administrator password
 (`XLReleasePassword`)|`**__Requires input__**`|The administrator password for XL Release|XL Release cluster mode
 (`XLReleaseClusterMode`)|`default`|Set the clustermode for XL Release|XL Release license
-(`XLReleaseLicense`)|`trial`|The (Base64 encoded) license for XL Release|Accept the XebiaLabs EULA
-(`AcceptEula`)|`**__Requires input__**`|To deploy the stack, AcceptEula value must be set to 'yes'
+(`XLReleaseLicense`)|`trial`|The (Base64 encoded) license for XL Release|Accept the Digital.ai EULA
+(`AcceptEula`)|`**__Requires input__**`|To deploy the stack, AcceptEula value must be set to 'yes'. Note - Irrespective of having a full license or a 30 days trial license or evaluating the product for 7 days using docker containers, you must accept EULA (End-user license agreement)
 |===
 .AWS Quick Start Configuration
 [width="100%",cols="16%,11%,73%",options="header",]

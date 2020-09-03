@@ -86,7 +86,7 @@ Parameters:
     AllowedPattern: '[0-9A-Za-z=+/]*'
     Default: trial
   SslCertificateArn:
-    Description: The ARN of the SSL certificate used to secure internet access to the XebiaLabs DevOps Platform
+    Description: The ARN of the SSL certificate used to secure internet access to the Digital.ai DevOps Platform
     Type: String
     Default: ':default'
   AcceptEula:

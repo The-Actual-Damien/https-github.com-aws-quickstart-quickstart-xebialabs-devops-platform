@@ -1,7 +1,7 @@
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: |
-  Sub template to setup an ECS cluster for running the XebiaLabs DevOps Platform
+  Sub template to setup an ECS cluster for running the Digital.ai DevOps Platform
 Parameters: 
   EnvironmentName:
     AllowedPattern: ^[0-9a-zA-Z]+([0-9a-zA-Z-]*[0-9a-zA-Z])*$
