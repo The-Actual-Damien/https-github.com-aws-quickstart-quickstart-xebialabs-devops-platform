@@ -37,7 +37,7 @@
 (`KeyPairName`)|`**__Requires input__**`|The name of an existing public/private key pair, which allows you to securely connect to your instance after it launches|Install bastion host
 (`InstallBastionHost`)|`false`|Whether or not to install and configure a bastion host
 |===
-.XebiaLabs DevOps Platform Configuration
+.Digital.ai DevOps Platform Configuration
 [width="100%",cols="16%,11%,73%",options="header",]
 |===
 |Parameter label (name) |Default value|Description|XL DevOps Platform instance type
@@ -54,7 +54,7 @@
 (`XLReleasePassword`)|`**__Requires input__**`|The administrator password for XL Release|XL Release cluster mode
 (`XLReleaseClusterMode`)|`default`|Set the clustermode for XL Release|XL Release license
 (`XLReleaseLicense`)|`trial`|The (Base64 encoded) license for XL Release|Accept the Digital.ai EULA
-(`AcceptEula`)|`**__Requires input__**`|To deploy the stack, AcceptEula value must be set to 'yes'. Note - Irrespective of having a full license or a 30 days trial license or evaluating the product for 7 days using docker containers, you must accept EULA (End-user license agreement)
+(`AcceptEula`)|`**__Requires input__**`|To deploy the stack, AcceptEula value must be set to 'yes'. Note - Irrespective of having a full license or a 30 days trial license or evaluating the product for 7 days using docker containers, you must accept EULA (End-user license agreement). https://xebialabs.com/legal/XebiaLabs-Master-Subscription-Agreement-September-2018.pdf
 |===
 .AWS Quick Start Configuration
 [width="100%",cols="16%,11%,73%",options="header",]

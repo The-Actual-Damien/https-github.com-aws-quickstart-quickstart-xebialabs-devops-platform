@@ -56,7 +56,7 @@
 (`XLDeployClusterMode`)|`default`|Set the clustermode for XL Deploy|XL Deploy license
 (`XLDeployLicense`)|`trial`|The (Base64 encoded) license for XL Deploy|EFS mount point
 (`MountPoint`)|`/mnt/efs`|The Linux mount point for the EFS volume|Accept the Digital.ai EULA
-(`AcceptEula`)|`**__Requires input__**`|To deploy the stack, AcceptEula value must be set to 'yes'. Note - Irrespective of having a full license or a 30 days trial license or evaluating the product for 7 days using docker containers, you must accept EULA (End-user license agreement)
+(`AcceptEula`)|`**__Requires input__**`|To deploy the stack, AcceptEula value must be set to 'yes'. Note - Irrespective of having a full license or a 30 days trial license or evaluating the product for 7 days using docker containers, you must accept EULA (End-user license agreement). https://xebialabs.com/legal/XebiaLabs-Master-Subscription-Agreement-September-2018.pdf
 |===
 .AWS Quick Start Configuration
 [width="100%",cols="16%,11%,73%",options="header",]

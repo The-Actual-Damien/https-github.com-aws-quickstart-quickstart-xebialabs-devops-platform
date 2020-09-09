@@ -39,7 +39,7 @@ Metadata:
           - KeyPairName
           - InstallBastionHost
       - Label:
-          default: XebiaLabs DevOps Platform Configuration
+          default: Digital.ai DevOps Platform Configuration
         Parameters:
           - XLPlatformInstanceType
           - InstallXLDeploy
@@ -188,7 +188,7 @@ Parameters:
       - 'true'
       - 'false'
   AcceptEula:
-    Description: To deploy the stack, AcceptEula value must be set to 'yes'. Note - Irrespective of having a full license or a 30 days trial license or evaluating the product for 7 days using docker containers, you must accept EULA (End-user license agreement)
+    Description: To deploy the stack, AcceptEula value must be set to 'yes'. Note - Irrespective of having a full license or a 30 days trial license or evaluating the product for 7 days using docker containers, you must accept EULA (End-user license agreement). https://xebialabs.com/legal/XebiaLabs-Master-Subscription-Agreement-September-2018.pdf
     Type: String
     AllowedPattern: '^yes$'    
   SslCertificateArn:
